@@ -1,6 +1,6 @@
 ## Amazon
 ### Code Badges
-build status icon
+[![Build Status](https://travis-ci.org/zoeames/amazon.svg)](https://travis-ci.org/zoeames/amazon)
 coverage status icon
 
 ### Screenshots
