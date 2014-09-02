@@ -1,7 +1,7 @@
 ## Amazon
 ### Code Badges
 [![Build Status](https://travis-ci.org/zoeames/amazon.svg)](https://travis-ci.org/zoeames/amazon)
-coverage status icon
+[![Coverage Status](https://coveralls.io/repos/zoeames/amazon/badge.png)](https://coveralls.io/r/zoeames/amazon)
 
 ### Screenshots
 ![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
