@@ -1,4 +1,4 @@
-## name of project
+## Amazon
 ### Code Badges
 build status icon
 coverage status icon
