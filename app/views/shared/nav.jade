@@ -11,6 +11,8 @@
     .collapse.navbar-collapse#bs-navbar-collapse
       ul.nav.navbar-nav.navbar-right
         if user
+          li: a(href='/products'): i.fa.fa-barcode &nbsp; Products
+          li: a(href='/cart'): i.fa.fa-shopping-cart &nbsp; Cart
           li: a(href='/users/#{user._id}'): i.fa.fa-user &nbsp; My Profile
           li
             form.navbar-form(method='post', action='/logout')

@@ -1,0 +1,26 @@
+extends ../shared/template
+block content
+  h2 Products
+  .row
+    .col-xs-2
+    .col-xs-8
+      .panel.panel-default
+        .panel-body
+          table.table
+            thead
+              tr
+                th.sort-header Product
+                th.sort-header Photo
+                th.sort-header Price
+            tbody
+              each product in products
+                tr
+                  td
+                    form(method='post', action='/cart')
+                      input(type='hidden', name='productId', value=product._id)
+                      button.btn.btn-primary.btn-lg(type='submit')= product.name
+                  td: img(src=product.photo style="width: 200px; height: 200px;")
+                  td $#{product.price.toFixed(2)}
+      .col-xs-2
+
+block scripts

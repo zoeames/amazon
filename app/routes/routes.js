@@ -12,6 +12,8 @@ var morgan         = require('morgan'),
     security       = require('../lib/security'),
     debug          = require('../lib/debug'),
     home           = require('../controllers/home'),
+    products       = require('../controllers/products'),
+    cart           = require('../controllers/cart'),
     users          = require('../controllers/users');
 
 module.exports = function(app, express){
@@ -55,6 +57,11 @@ module.exports = function(app, express){
   app.put('/users/:id', users.update);
   app.get('/users/:id/edit', users.edit);
 
-  console.log('Express: Routes Loaded');
+  app.get('/products', products.index);
+  app.post('/cart', cart.add);
+  app.get('/cart', cart.index);
+  app.delete('/cart', cart.destroy);
+  app.post('/charge', cart.purchase);
+  console.log('Expre`ss: Routes Loaded');
 };
 

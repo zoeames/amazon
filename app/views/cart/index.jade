@@ -1,0 +1,84 @@
+extends ../shared/template
+block content
+  h2 My Cart
+  form(method='post', action='/cart')
+    input(type='hidden', name='_method', value='delete')
+    button.btn.btn-danger(type='submit') Delete Cart
+
+  form(action='/charge', method='post')
+    script.stripe-button(src='https://checkout.stripe.com/checkout.js', data-key=key, data-image='/img/rocket.png', data-name='Amazon', data-amount=Math.round(total*100))
+
+  .row
+    .col-xs-2
+    .col-xs-8
+      .panel.panel-default
+        .panel-body
+          table.table
+            thead
+              tr
+                th Product
+                th Photo
+                th Price
+                th Count
+                th Total
+            tbody
+              each id in ids
+                tr
+                  td= products[id].p.name
+                  td(style='background-image: url("#{products[id].p.photo}"); height: 200px; width: 200px;')
+                  td $#{products[id].p.price.toFixed(2)}
+                  td= products[id].c
+                  td= '$' + (products[id].p.price*products[id].c).toFixed(2)
+              tr
+                td
+                td
+                td
+                td Subtotal
+                td= '$' + subtotal.toFixed(2)
+              tr
+                td
+                td
+                td
+                td(style='color: red;') Tax
+                td(style='color: red;')= '$' + tax.toFixed(2)
+            tfoot
+              tr
+                td
+                td
+                td
+                td(style='color: green;') Total
+                td(style='color: green;')= '$' + total.toFixed(2)
+      .col-xs-2
+block scripts
+
+extends ../shared/template
+block content
+  table#products.table.table-bordered
+    thead
+      tr
+        th Product
+        th Image
+        th Price
+        th Quantity
+        th SubTotal
+    tbody
+      each id in ids
+        tr
+          td= products[id].p.name
+          td(style='background-image:url("#{products[id].p.photo}")')
+          td $#{products[id].p.price.toFixed(2)}
+          td= products[id].c
+          td= '$' + subtotal.toFixed(2)
+      tr
+        td
+        td
+        td
+        td Tax
+        td= '$' + tax.toFixed(2)
+    tfoot
+      tr
+        td
+        td
+        td
+        td Total
+        td= '$' + total.toFixed(2)

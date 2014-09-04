@@ -1,0 +1,35 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"TV",
+  "photo":"http://bloomfieldknoble.files.wordpress.com/2010/12/sonytv.jpg",
+  "price":399.95
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"mop",
+  "photo":"http://www.cleaningshop.com.au/contents/media/extra_long_cotton_mop_2.jpg",
+  "price":9.95
+}
+
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"Long Johns",
+  "photo":"http://ep.yimg.com/ca/I/cowboyoutfitters_2270_630345328.jpg",
+  "price":399.95
+}
+
+{
+  "_id":{"$oid":"000000000000000000000004"},
+  "name":"umbrella",
+  "photo":"http://3.bp.blogspot.com/_dhxYs8_ifBk/St-ehav4LxI/AAAAAAAABDI/FwoGxoPhMBI/s320/UmbrellaNEWSTEAM_450x450.jpg",
+  "price":29.99
+}
+
+{
+  "_id":{"$oid":"000000000000000000000005"},
+  "name":"computer",
+  "photo":"http://www.smashinglists.com/wp-content/uploads/2010/07/Mac-128k-600x399.jpg",
+  "price":3999
+}
+
