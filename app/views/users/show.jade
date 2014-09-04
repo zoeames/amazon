@@ -1,0 +1,28 @@
+extends ../shared/template
+block content
+  if client._id == user._id.toString()
+    .row
+      h2 My Profile
+      br
+      br
+    .row
+      .col-xs-3
+      .col-xs-6
+        .panel.panel-default
+          .panel-body
+            a.btn.btn-primary.btn-sm(href='/users/#{user._id}/edit'): i.fa.fa-pencil &nbsp; Edit Profile
+            br
+            img(src=user.photo style="width: 350px; height: 350px;")
+            table.table
+              thead
+                tr
+                  th Email
+                  th Age
+              tbody
+                tr
+                  td= user.email
+                  td= user.age
+      .col-xs-3
+
+
+block scripts
